@@ -160,6 +160,6 @@ transfer-anywhere/
 
 ## License
 
-No license has been specified yet. If you want others to reuse, modify, or redistribute this project, add a license file (for example, an MIT License) after choosing the license terms.
+No license has been specified yet. If you want others to reuse, modify, or redistribute this project.
 
-## Developed by Md. Jakirul Islam
+# Developed by Md. Jakirul Islam
