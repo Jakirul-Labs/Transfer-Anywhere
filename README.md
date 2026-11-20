@@ -31,15 +31,6 @@ Transfer Anywhere uses **WebRTC DataChannels** for peer-to-peer transfers. The N
 3. Select **Download ZIP**.
 4. Extract the downloaded ZIP file to a folder on your computer.
 
-You can also clone the repository with Git:
-
-```bash
-git clone YOUR_REPOSITORY_URL
-cd transfer-anywhere
-```
-
-Replace `YOUR_REPOSITORY_URL` with the URL of this repository.
-
 ### 2. Install Node.js
 
 If Node.js is not installed, download and install the LTS version from:
