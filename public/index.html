@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eef2ff" />
+  <title>Transfer Anywhere</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M7 7h10l-3-3m3 3-3 3M17 17H7l3 3m-3-3 3-3"/></svg></span><span>Transfer<span class="brand-light">Anywhere</span></span></a>
+      <div class="network-pill"><span class="pulse"></span> Local network transfer</div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="sparkle">✦</span> SIMPLE. FAST. PRIVATE.</div>
+      <h1>Transfer files and text<br><span>without limits.</span></h1>
+      <p>Send directly between devices on the same Wi-Fi network.<br class="desktop-break"> No cloud uploads. No account required.</p>
+    </section>
+
+    <section class="tool-grid" aria-label="Transfer tools">
+      <article class="tool-card file-card">
+        <div class="card-art file-art"><div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="file-illustration"><div class="file-fold"></div><span>FILE</span><i></i><i></i><i></i></div><div class="art-spark spark-a">✦</div><div class="art-spark spark-b">✧</div></div>
+        <div class="card-content">
+          <div class="tool-kicker">01 / SHARE DOCUMENTS</div>
+          <h2>File Transfer</h2>
+          <p>Move photos, videos, documents and more directly between devices.</p>
+          <div class="tabs" role="tablist" aria-label="File transfer mode"><button class="tab active" data-tab="file-send">Send File</button><button class="tab" data-tab="file-receive">Receive File</button></div>
+          <div class="panel active" id="file-send">
+            <div class="drop-zone" id="drop-zone"><input type="file" id="file-input" hidden /><div class="upload-icon">↑</div><strong>Choose a file to send</strong><span>or drag and drop it here</span><button class="outline-button" id="choose-file">Browse files</button><div class="selected-file" id="selected-file"></div></div>
+            <button class="primary-button" id="send-file" disabled>Send file <span>↗</span></button>
+          </div>
+          <div class="panel" id="file-receive"><div class="code-entry"><label for="file-code">Enter 6-digit code</label><input id="file-code" inputmode="numeric" maxlength="6" placeholder="000 000" autocomplete="one-time-code" /></div><button class="primary-button join-button" data-join="file">Connect to sender <span>→</span></button></div>
+        </div>
+      </article>
+
+      <article class="tool-card text-card">
+        <div class="card-art text-art"><div class="text-orbit orbit-a"></div><div class="text-orbit orbit-b"></div><div class="message-illustration"><span></span><span></span><span></span><b>•••</b></div><div class="art-spark spark-c">✦</div><div class="art-spark spark-d">✧</div></div>
+        <div class="card-content">
+          <div class="tool-kicker">02 / SHARE INSTANTLY</div>
+          <h2>Text Transfer</h2>
+          <p>Send notes, links, code snippets and messages in just a moment.</p>
+          <div class="tabs" role="tablist" aria-label="Text transfer mode"><button class="tab active" data-tab="text-send">Send Text</button><button class="tab" data-tab="text-receive">Receive Text</button></div>
+          <div class="panel active" id="text-send"><textarea id="text-input" placeholder="Type or paste your text here..."></textarea><button class="primary-button" id="send-text" disabled>Send text <span>↗</span></button></div>
+          <div class="panel" id="text-receive"><div class="code-entry"><label for="text-code">Enter 6-digit code</label><input id="text-code" inputmode="numeric" maxlength="6" placeholder="000 000" autocomplete="one-time-code" /></div><button class="primary-button join-button" data-join="text">Connect to sender <span>→</span></button></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="connection-panel" id="connection-panel">
+      <div class="connection-heading"><div><div class="tool-kicker">YOUR SESSION</div><h3>Device connection</h3></div><span class="status-chip" id="connection-status"><i></i> Not connected</span></div>
+      <div class="session-content" id="session-content"><div class="session-empty"><span class="empty-icon">⌁</span><div><strong>No active session</strong><p>Choose Send or Receive to connect devices on your Wi-Fi.</p></div></div></div>
+      <div class="peer-list" id="peer-list"></div>
+      <div class="activity-list" id="activity-list"></div>
+    </section>
+
+    <footer>
+    <span>Transfer Anywhere</span>
+    <div class="footer-right">
+      <span>Direct device-to-device transfer · Same Wi-Fi network</span>
+      <span class="developer-credit">Developed by Md. Jakirul Islam</span>
+    </div>
+    </footer>
+
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
